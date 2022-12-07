@@ -1,18 +1,14 @@
 local background = Instance.new("ScreenGui")
 local back = Instance.new("Frame",background)
 local enter = Instance.new("TextBox",back)
-local submit = Instance.new("TextButton",back)
 background.Parent = game.Players.LocalPlayer.PlayerGui
 background.Name = "StickyKey"
-back.Size = UDim2.new(0.2,0,0.2,0)
+back.Size = UDim2.new(0.1,0,0.1,0)
 back.Position = UDim2.new(0,0,0)
-enter.Size = UDim2.new(1,0,0.5,0)
+enter.Size = UDim2.new(1,0,1,0)
 enter.Position = UDim2.new(0.5,0.5,0.5)
-submit.Size = UDim2.new(1,0,0.5,0)
-submit.Position = UDim2.new(0.5,0,1,0.5)
 back.BackgroundTransparency = 1
 enter.Text = "Enter Key Here."
-submit.Text = "Submit Key."
 
 _G.Keys = {
 
@@ -30,5 +26,4 @@ _G.Keys = {
 
 
 _G.keyEnter = enter
-_G.Clicked = submit
 
