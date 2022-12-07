@@ -29,4 +29,4 @@ _G.Keys = {
 }
 
 
-_G.keyEnter = enter.Text
+_G.keyEnter = enter
