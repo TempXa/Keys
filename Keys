@@ -30,3 +30,7 @@ _G.Keys = {
 
 
 _G.keyEnter = enter
+_G.Clicked = submit.MouseButton1Down:Connect(function()
+    
+end)
+
