@@ -1,4 +1,4 @@
-local background = Instance.new("ScreenGui")
+_G.background = Instance.new("ScreenGui")
 local back = Instance.new("Frame",background)
 local enter = Instance.new("TextBox",back)
 background.Parent = game.Players.LocalPlayer.PlayerGui
