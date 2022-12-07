@@ -1,2 +1,13 @@
-local key = “YpvRJ8l5J”
-return key
+_G.Key = {
+
+  "Kqbd1RO4Fw",
+  "LSHlsqZQ6W",
+  "aJrqH2X94n",
+  "XCwv37Z87l",
+  "u9y1r0Aimf",
+  "DEKE3Vvo2y",
+  "3PeH7A6zde",
+  "zU6IodSkA5",
+  "9RiC0W0UxL",
+  "fKxSnsHyiK",
+}
