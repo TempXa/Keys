@@ -1,5 +1,5 @@
 _G.background = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
-local back = Instance.new("Frame",background)
+local back = Instance.new("Frame",_G.background)
 local enter = Instance.new("TextBox",back)
 _G.background.Name = "StickyKey"
 back.Size = UDim2.new(0.1,0,0.1,0)
