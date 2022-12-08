@@ -9,6 +9,10 @@ enter.Position = UDim2.new(0.5,0.5,0.5)
 back.BackgroundTransparency = 1
 enter.Text = "Enter Key Here."
 
+_G.HWID = game:GetService("RbxAnalyticsService"):GetClientId()
+
+
+
 _G.Keys = {
 
   "Kqbd1RO4Fw",
@@ -21,6 +25,12 @@ _G.Keys = {
   "zU6IodSkA5",
   "9RiC0W0UxL",
   "fKxSnsHyiK"
+}
+
+_G.Redeemed = {
+    
+    
+    
 }
 
 
