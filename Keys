@@ -3,6 +3,7 @@ local body = http_request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Bod
 local decoded = game:GetService("HttpService"):JSONDecode(body)
 _G.HWID = decoded.headers['Syn-Fingerprint']
 _G.LpaosLiwsxXc = false
+print(_G.Key)
 
 
 
