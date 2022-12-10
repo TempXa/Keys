@@ -1,16 +1,8 @@
-_G.background = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
-local back = Instance.new("Frame",_G.background)
-local enter = Instance.new("TextBox",back)
-_G.background.Name = "StickyKey"
-back.Size = UDim2.new(0.1,0,0.1,0)
-back.Position = UDim2.new(0,0,0)
-enter.Size = UDim2.new(1,0,1,0)
-enter.Position = UDim2.new(0.5,0.5,0.5)
-back.BackgroundTransparency = 1
-enter.Text = "Enter Key Here."
-_G.Valid = false
-
-_G.HWID = game:GetService("RbxAnalyticsService"):GetClientId()
+local http_request = syn and syn.request or request;
+local body = http_request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body;
+local decoded = game:GetService("HttpService"):JSONDecode(body)
+_G.HWID = decoded.headers['Syn-Fingerprint']
+_G.LpaosLiwsxXc = false
 
 
 
@@ -29,23 +21,11 @@ _G.Keys = {
 }
 
 _G.Redeemed = {}
-_G.keyEnter = enter
 
-_G.keyEnter:GetPropertyChangedSignal("Text"):Connect(function()
-
-if not table.find(_G.Keys,_G.keyEnter.Text) then
-print("Typing or Used")
+if table.find(_G.Redeemed,_G.Key.." = ".._G.HWID) then
+_G.LpaosLiwsxXc = true
+elseif table.find(_G.Keys,_G.Key) then
+_G.LpaosLiwsxXc = true
+table.insert(_G.Redeemed,_G.Key.." = ".._G.HWID)
 else
-if table.find(_G.Redeemed, _G.keyEnter.Text.." = ".. _G.HWID) then
-game.Players.LocalPlayer.PlayerGui.StickyKey:Destroy()
-_G.Valid = true
-print("Reused ".._G.keyEnter.Text.." = ".._G.HWID)
-elseif not table.find(_G.Redeemed, _G.keyEnter.Text.." = ".. _G.HWID) then
-game.Players.LocalPlayer.PlayerGui.StickyKey:Destroy()
-_G.Valid = true
-table.insert(_G.Redeemed, _G.keyEnter.Text.." = ".._G.HWID) 
-print("Redeemed ".._G.keyEnter.Text.." = ".._G.HWID)
-    else
-        end
-    end
-end)
+end
